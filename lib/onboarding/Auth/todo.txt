@@ -1,0 +1,17 @@
+Save a Task
+
+
+void saveTask(String email, String task) async {
+  var userBox = Hive.box(email); // Open the user's unique box
+  List tasks = userBox.get('tasks', defaultValue: []);
+  tasks.add(task);
+  await userBox.put('tasks', tasks);
+}
+
+
+Retrieve Tasks
+dart
+List getTasks(String email) {
+  var userBox = Hive.box(email);
+  return userBox.get('tasks', defaultValue: []);
+}

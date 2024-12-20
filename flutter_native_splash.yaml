@@ -1,0 +1,29 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  
+  # Ensure a solid black background
+  color: "#000000"  # Solid black background
+  
+  # Image configuration
+  image: "assets/rb.png"
+  
+  # Gradient alternative (if you prefer a gradient)
+  background_gradient:
+    begin: topCenter
+    end: bottomCenter
+    colors: 
+      - "#000000"  # Black
+      - "#1A1A1A"  # Slightly lighter black/dark gray
+  
+  # Text configuration
+  text: "NotesWhiz"
+  text_color: "#FFFFFF"
+  
+  # Positioning
+  android_gravity: center
+  image_position_bottom: false
+  
+android_12:
+  color: "#000000"
+  image: "assets/rb.png"
