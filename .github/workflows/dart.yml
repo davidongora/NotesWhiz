@@ -67,7 +67,7 @@ jobs:
 
     # Step 9: Upload the .ipa as an artifact
     - name: Upload .ipa as build artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ios-build
         path: build/Runner.ipa
