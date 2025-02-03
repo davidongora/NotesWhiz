@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:notes/onboarding/Auth/login.dart';
 import 'package:notes/shared/buttons.dart';
-import 'package:in_app_update/in_app_update.dart';
+// import 'package:in_app_update/in_app_update.dart';
 
 
 class MyWidget extends StatefulWidget {
@@ -15,29 +15,29 @@ class MyWidget extends StatefulWidget {
 class _MyWidgetState extends State<MyWidget> {
   late final PageController _pageController;
   int _currentPage = 0;
-  AppUpdateInfo? _updateInfo;
+  // AppUpdateInfo? _updateInfo;
 
   @override
   void initState() {
     super.initState();
     _pageController = PageController(initialPage: 0);
-    checkForUpdates();
+    // checkForUpdates();
     // Automatically switch pages every 3 seconds
   }
 
-  Future<void> checkForUpdates() async {
-    try {
-      _updateInfo = await inAppUpdate.checkForUpdate();
+  // Future<void> checkForUpdates() async {
+  //   try {
+  //     _updateInfo = await inAppUpdate.checkForUpdate();
 
-      if (_updateInfo.updateAvailability ==
-          updateAvailability.updateAvailable) {
-        await inAppUpdate.performImmediateUpdate();
-      }
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to fetch updates')));
-    }
-  }
+  //     if (_updateInfo.updateAvailability ==
+  //         updateAvailability.updateAvailable) {
+  //       await inAppUpdate.performImmediateUpdate();
+  //     }
+  //   } catch (e) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text('Failed to fetch updates')));
+  //   }
+  // }
 
   @override
   void dispose() {
