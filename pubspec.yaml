@@ -64,7 +64,7 @@ flutter_icons:
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
   # image_picker: ^1.1.2
-  in_app_update: ^2.0.0
+  # in_app_update: ^2.0.0
 
 
 # For information on the generic Dart part of this file, see the
